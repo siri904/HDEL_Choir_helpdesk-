@@ -1,0 +1,1292 @@
+<title>오르락(樂) 합창단 안내소</title>
+<style>
+  @font-face {
+    font-family: "NeoHyundai";
+    src: url("fonts/NeoHyundai-L.ttf") format("truetype");
+    font-weight: 300;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NeoHyundai";
+    src: url("fonts/NeoHyundai-R.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NeoHyundai";
+    src: url("fonts/NeoHyundai-B.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NeoHyundai";
+    src: url("fonts/NeoHyundai-EB.ttf") format("truetype");
+    font-weight: 800;
+    font-display: swap;
+  }
+
+  :root {
+    --paper: #f6f4ee;
+    --paper-raised: #ffffff;
+    --ink: #211f1a;
+    --ink-soft: #565247;
+    --line: #ddd7c8;
+    --navy: #1f3350;
+    --navy-ink: #ffffff;
+    --gold: #fb497b;
+    --gold-ink: #ffffff;
+    --teal: #2f6e63;
+    --teal-soft: #e4efec;
+    --coral: #b4482f;
+    --coral-soft: #f6e6e0;
+    --gold-soft: #fde3ea;
+    --navy-soft: #e6eaf1;
+    --focus: #1f6fb2;
+    --shadow: 0 10px 30px -18px rgba(33, 31, 26, 0.45);
+    --brand-grad: linear-gradient(135deg, #3db276 0%, #58b45d 100%);
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: linear-gradient(135deg, #545c69 0%, #222328 100%);
+      --paper-raised: #1f2227;
+      --ink: #ece8e0;
+      --ink-soft: #ffffff;
+      --line: #33363c;
+      --navy: #3db276;
+      --navy-ink: #ffffff;
+      --gold: #fb497b;
+      --gold-ink: #ffffff;
+      --teal: #7fc9b8;
+      --teal-soft: #1c2b28;
+      --coral: #e08267;
+      --coral-soft: #2c1e19;
+      --gold-soft: #3a1420;
+      --navy-soft: #1b2432;
+      --focus: #6fb3ea;
+      --shadow: 0 10px 30px -14px rgba(0, 0, 0, 0.6);
+      --brand-grad: linear-gradient(135deg, #3db276 0%, #58b45d 100%);
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: linear-gradient(135deg, #545c69 0%, #222328 100%);
+    --paper-raised: #1f2227;
+    --ink: #ece8e0;
+    --ink-soft: #ffffff;
+    --line: #33363c;
+    --navy: #3db276;
+    --navy-ink: #ffffff;
+    --gold: #fb497b;
+    --gold-ink: #ffffff;
+    --teal: #7fc9b8;
+    --teal-soft: #1c2b28;
+    --coral: #e08267;
+    --coral-soft: #2c1e19;
+    --gold-soft: #3a1420;
+    --navy-soft: #1b2432;
+    --focus: #6fb3ea;
+    --shadow: 0 10px 30px -14px rgba(0, 0, 0, 0.6);
+    --brand-grad: linear-gradient(135deg, #3db276 0%, #58b45d 100%);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  body {
+    margin: 0;
+    font-family: "NeoHyundai", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.65;
+    padding-inline: max(18px, env(safe-area-inset-left, 0px));
+    padding-inline-end: max(18px, env(safe-area-inset-right, 0px));
+  }
+
+  h1, h2, h3 {
+    font-family: "NeoHyundai", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    font-weight: 800;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  button { font-family: inherit; }
+
+  :focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  a { color: var(--teal); }
+
+  /* ---------- Password gate ---------- */
+
+  #gate {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      radial-gradient(ellipse at top, var(--navy-soft), transparent 60%),
+      var(--paper);
+    z-index: 50;
+    padding: 24px;
+  }
+
+  #gate[hidden] { display: none; }
+
+  .gate-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 36px 32px;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+
+  .gate-mark {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 18px;
+    border-radius: 14px;
+    background: var(--brand-grad);
+    display: grid;
+    place-items: center;
+  }
+
+  .gate-mark svg { width: 26px; height: 26px; }
+
+  .gate-card h1 {
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .gate-sub {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    margin-bottom: 26px;
+  }
+
+  .gate-field {
+    text-align: left;
+    margin-bottom: 14px;
+  }
+
+  .gate-field label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .gate-field input {
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: 10px;
+    border: 1.5px solid var(--line);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 1rem;
+  }
+
+  .gate-field input:focus-visible { border-color: var(--focus); }
+
+  .gate-btn {
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: 10px;
+    border: none;
+    background: var(--brand-grad);
+    color: var(--navy-ink);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+
+  .gate-btn:hover { filter: brightness(1.08); }
+
+  .gate-error {
+    color: var(--coral);
+    font-size: 0.88rem;
+    margin-top: 12px;
+    min-height: 1.2em;
+  }
+
+  .gate-note {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--line);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  /* ---------- App shell ---------- */
+
+  #app[hidden] { display: none; }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding-block: 28px 60px;
+  }
+
+  header.masthead {
+    background: var(--brand-grad);
+    color: var(--navy-ink);
+    border-radius: 20px;
+    padding: 30px 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  .masthead-mark {
+    flex: none;
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    background: var(--gold);
+    display: grid;
+    place-items: center;
+  }
+
+  .masthead-mark svg { width: 28px; height: 28px; color: var(--gold-ink); }
+
+  .masthead h1 {
+    font-size: clamp(1.35rem, 1rem + 1.4vw, 1.75rem);
+    line-height: 1.25;
+  }
+
+  .masthead p {
+    margin: 6px 0 0;
+    color: var(--navy-ink);
+    font-size: 0.92rem;
+  }
+
+  nav.tabs {
+    display: flex;
+    gap: 8px;
+    margin-top: 22px;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 6px;
+    position: sticky;
+    top: calc(env(safe-area-inset-top, 0px) + 10px);
+    z-index: 10;
+    box-shadow: var(--shadow);
+  }
+
+  nav.tabs button {
+    flex: 1;
+    padding: 12px 10px;
+    border: none;
+    background: transparent;
+    color: var(--ink-soft);
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  nav.tabs button svg { width: 18px; height: 18px; }
+
+  nav.tabs button[aria-selected="true"] {
+    background: var(--brand-grad);
+    color: var(--navy-ink);
+  }
+
+  section.panel { margin-top: 22px; }
+  section.panel[hidden] { display: none; }
+
+  /* ---------- Keyword guide ---------- */
+
+  .kw-intro {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+  }
+
+  .kw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: 600px) {
+    .kw-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .kw-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 10px;
+    border-radius: 14px;
+    border: 1.5px solid var(--line);
+    background: var(--paper-raised);
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 0.92rem;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .kw-btn svg {
+    width: 24px;
+    height: 24px;
+    color: var(--ink-soft);
+  }
+
+  .kw-btn[aria-pressed="true"] {
+    background: var(--brand-grad);
+    color: var(--navy-ink);
+    border-color: transparent;
+  }
+
+  .kw-btn[aria-pressed="true"] svg { color: var(--navy-ink); }
+
+  .kw-detail {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px;
+  }
+
+  .kw-detail h3 {
+    font-size: 1.15rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .kw-detail p.body-text {
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    margin: 0 0 18px;
+  }
+
+  .kw-detail ul.body-list {
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    margin: 0 0 18px;
+    padding-left: 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .kw-detail ul.body-list li strong {
+    color: var(--ink);
+  }
+
+  .kw-detail .body-text strong,
+  .kw-detail ul.body-list strong {
+    font-weight: 700;
+  }
+
+  .kw-faq {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--line);
+  }
+
+  .kw-faq-heading {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+
+  .kw-faq-item {
+    background: var(--navy-soft);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+
+  .kw-faq-item:last-child { margin-bottom: 0; }
+
+  .kw-faq-q {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 0.92rem;
+    margin-bottom: 6px;
+  }
+
+  .kw-faq-a {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .kw-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .kw-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    line-height: 1.3;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    box-sizing: border-box;
+    vertical-align: middle;
+  }
+
+  .kw-action svg { width: 16px; height: 16px; flex: none; }
+
+  .kw-action.link { background: var(--navy-soft); color: var(--navy); }
+  .kw-action.manual { background: var(--teal-soft); color: var(--teal); }
+
+  .kw-action.pending {
+    background: var(--paper);
+    color: var(--ink-soft);
+    border: 1.5px dashed var(--line);
+    cursor: not-allowed;
+  }
+
+  /* ---------- Manual viewer ---------- */
+
+  #manualViewer {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    background: rgba(10, 12, 16, 0.86);
+    display: flex;
+    flex-direction: column;
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  }
+
+  #manualViewer[hidden] { display: none; }
+
+  .mv-head {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px;
+    color: #fff;
+  }
+
+  .mv-title {
+    font-family: "NeoHyundai", "Apple SD Gothic Neo", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .mv-page {
+    font-variant-numeric: tabular-nums;
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+
+  .mv-close {
+    border: none;
+    background: rgba(255,255,255,0.14);
+    color: #fff;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+  }
+
+  .mv-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 10px;
+    position: relative;
+  }
+
+  .mv-body img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  }
+
+  .mv-nav {
+    flex: none;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.14);
+    color: #fff;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+
+  .mv-nav:disabled { opacity: 0.3; cursor: default; }
+  .mv-nav svg { width: 24px; height: 24px; }
+
+  .mv-foot {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 16px;
+  }
+
+  /* ---------- Archive ---------- */
+
+  .archive-intro {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+  }
+
+  .archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+
+  .event-card {
+    text-align: left;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event-cover {
+    height: 120px;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+
+  .event-cover svg { width: 40px; height: 40px; }
+
+  .event-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .event-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+
+  .event-body { padding: 14px 16px 16px; }
+
+  .event-date {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--gold);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .event-title {
+    font-family: "NeoHyundai", "Apple SD Gothic Neo", sans-serif;
+    font-weight: 800;
+    font-size: 1.05rem;
+    margin: 4px 0 0;
+    line-height: 1.4;
+  }
+
+  .event-detail {
+    margin-top: 16px;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px;
+  }
+
+  .event-detail[hidden] { display: none; }
+
+  .event-detail-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .event-detail-head h3 {
+    font-size: 1.2rem;
+    color: var(--navy);
+  }
+
+  .close-detail {
+    flex: none;
+    border: none;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    color: var(--ink-soft);
+  }
+
+  .event-detail p.desc {
+    color: var(--ink-soft);
+    margin: 10px 0 18px;
+  }
+
+  .media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .media-tile {
+    aspect-ratio: 1;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+  }
+
+  .media-tile svg { width: 22px; height: 22px; opacity: 0.55; }
+
+  .media-tile-photo {
+    padding: 0;
+    background: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .media-tile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .video-wrap {
+    margin-bottom: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: #000;
+  }
+
+  .event-video {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    background: #000;
+  }
+
+  .video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: var(--navy-soft);
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+  }
+
+  .video-link svg { width: 16px; height: 16px; }
+
+  /* ---------- Footer ---------- */
+
+  footer {
+    margin-top: 34px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  footer .warning-line, footer .warning-line strong {
+    color: #e02b2b;
+    font-weight: 700;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) footer .warning-line,
+    :root:not([data-theme="light"]) footer .warning-line strong {
+      color: #ff6b6b;
+    }
+  }
+
+  :root[data-theme="dark"] footer .warning-line,
+  :root[data-theme="dark"] footer .warning-line strong {
+    color: #ff6b6b;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+
+  @media (max-width: 420px) {
+    body { font-size: 16px; }
+
+    .gate-card { padding: 28px 22px; }
+
+    header.masthead {
+      padding: 22px 18px;
+      gap: 14px;
+      border-radius: 16px;
+    }
+
+    .masthead-mark { width: 44px; height: 44px; border-radius: 12px; }
+    .masthead-mark svg { width: 22px; height: 22px; }
+
+    .kw-detail, .event-detail { padding: 18px 16px; }
+
+    .mv-nav { width: 44px; height: 44px; }
+    .mv-foot { gap: 16px; padding: 12px; }
+  }
+</style>
+
+<script>document.documentElement.setAttribute("data-theme", "dark");</script>
+
+<div id="gate">
+  <div class="gate-card">
+    <div class="gate-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+    </div>
+    <h1>현대엘리베이터 오르락(樂) 합창단</h1>
+    <p class="gate-sub">단원 전용 페이지입니다. 안내받은 비밀번호를 입력해 주세요.</p>
+    <form id="gateForm">
+      <div class="gate-field">
+        <label for="pw">비밀번호</label>
+        <input id="pw" name="pw" type="password" autocomplete="current-password" inputmode="text" required>
+      </div>
+      <button type="submit" class="gate-btn">입장하기</button>
+      <p class="gate-error" id="gateError" role="alert"></p>
+    </form>
+    <div class="gate-note">
+      비밀번호를 잊으셨다면 운영 담당자에게 문의해 주세요.<br>
+      이 페이지의 링크는 단원과 관련 담당자 외에는 공유하지 말아 주세요.
+    </div>
+  </div>
+</div>
+
+<div id="app" hidden>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="masthead-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      </div>
+      <div>
+        <h1>현대엘리베이터 오르락(樂) 합창단</h1>
+        <p>자주 묻는 질문과 공연자료를 이곳에서 확인하세요</p>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="페이지 이동">
+      <button role="tab" id="tabFaq" aria-selected="true" aria-controls="panelFaq">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/></svg>
+        업무 안내
+      </button>
+      <button role="tab" id="tabArchive" aria-selected="false" aria-controls="panelArchive">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="10" r="2"/><path d="m21 15-4.5-4.5L9 18"/></svg>
+        공연 다시보기
+      </button>
+    </nav>
+
+    <section class="panel" id="panelFaq" role="tabpanel" aria-labelledby="tabFaq">
+      <p class="kw-intro">궁금한 키워드를 눌러 내용을 확인하세요.</p>
+      <div class="kw-grid" id="kwGrid" role="group" aria-label="키워드 선택"></div>
+      <div class="kw-detail" id="kwDetail"></div>
+    </section>
+
+    <section class="panel" id="panelArchive" role="tabpanel" aria-labelledby="tabArchive" hidden>
+      <p class="archive-intro">지난 공연의 사진과 영상을 모아둔 공간입니다. 카드를 눌러 자세히 볼 수 있어요.</p>
+      <div class="archive-grid" id="archiveGrid"></div>
+      <div class="event-detail" id="eventDetail" hidden></div>
+    </section>
+
+    <footer>
+      <div>담당자: 충주)043-722-1163 / 서울) 02-3670-0678</div>
+      <div class="warning-line"><strong>주의 이 페이지에는 사내 정보가 포함되어 있습니다. 외부에 링크를 공유하지 마세요.</strong></div>
+    </footer>
+  </div>
+</div>
+
+<div id="manualViewer" hidden>
+  <div class="mv-head">
+    <div>
+      <div class="mv-title" id="mvTitle"></div>
+      <div class="mv-page" id="mvPage"></div>
+    </div>
+    <button class="mv-close" id="mvClose" aria-label="방법 닫기">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mv-body">
+    <img id="mvImg" alt="">
+  </div>
+  <div class="mv-foot">
+    <button class="mv-nav" id="mvPrev" aria-label="이전 쪽">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="mv-nav" id="mvNext" aria-label="다음 쪽">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------------- Access gate ----------------
+     Lightweight deterrent only: the check runs in the browser, so it
+     keeps casual/outside visitors out but is not real access control.
+     Real protection comes from not sharing this link outside the choir. */
+  var PW_HASH = "35c2b3d00069be147817469d0f29de27b3776ffe4baa6361438d9b2b154964f7";
+  var SALT = "harmony-choir-2026";
+
+  async function sha256Hex(text) {
+    var enc = new TextEncoder().encode(text);
+    var buf = await crypto.subtle.digest("SHA-256", enc);
+    return Array.prototype.map.call(new Uint8Array(buf), function (b) {
+      return b.toString(16).padStart(2, "0");
+    }).join("");
+  }
+
+  var STORAGE_KEY = "harmonyChoirGateUnlocked_v1";
+
+  function showApp() {
+    document.getElementById("gate").hidden = true;
+    document.getElementById("app").hidden = false;
+  }
+
+  var gateForm = document.getElementById("gateForm");
+  var gateError = document.getElementById("gateError");
+
+  try {
+    if (localStorage.getItem(STORAGE_KEY) === "1") {
+      showApp();
+    }
+  } catch (e) { /* storage unavailable; fall through to prompt */ }
+
+  gateForm.addEventListener("submit", async function (evt) {
+    evt.preventDefault();
+    var entered = document.getElementById("pw").value.toLowerCase();
+    var hash = await sha256Hex(SALT + ":" + entered);
+    if (hash === PW_HASH) {
+      gateError.textContent = "";
+      try { localStorage.setItem(STORAGE_KEY, "1"); } catch (e) {}
+      showApp();
+    } else {
+      gateError.textContent = "비밀번호가 올바르지 않습니다. 다시 확인해 주세요.";
+    }
+  });
+
+  /* ---------------- Tabs ---------------- */
+
+  var tabFaq = document.getElementById("tabFaq");
+  var tabArchive = document.getElementById("tabArchive");
+  var panelFaq = document.getElementById("panelFaq");
+  var panelArchive = document.getElementById("panelArchive");
+
+  function selectTab(which) {
+    var faqOn = which === "faq";
+    tabFaq.setAttribute("aria-selected", String(faqOn));
+    tabArchive.setAttribute("aria-selected", String(!faqOn));
+    panelFaq.hidden = !faqOn;
+    panelArchive.hidden = faqOn;
+  }
+
+  tabFaq.addEventListener("click", function () { selectTab("faq"); });
+  tabArchive.addEventListener("click", function () { selectTab("archive"); });
+
+  /* ---------------- Keyword guide data ---------------- */
+
+  var ICON_LINK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>';
+  var ICON_DOC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>';
+
+  var KEYWORDS = [
+    {
+      id: "attend",
+      label: "근태",
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg>',
+      title: "근태 (출근·퇴근)",
+      body: [
+        "매일 (월~금 근무, 공휴일 제외)",
+        "계약 근무시간: 09:00~13:30",
+        "실제 근무시간: 09:40~13:00 (매일 09:40까지 출근해 주세요.)",
+        "근태 확인을 위해 카카오톡 단체방에 출근 기록을 반드시 입력해 주세요."
+      ],
+      actions: [
+        { label: "카카오톡 단체방 바로가기 (충주)", href: "https://open.kakao.com/o/gfT04pig", kind: "link" },
+        { label: "카카오톡 단체방 바로가기 (서울)", href: "https://open.kakao.com/o/g0q6H5wi", kind: "link" }
+      ]
+    },
+    {
+      id: "leave",
+      label: "휴가",
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
+      title: "휴가",
+      body: [
+        "입사 1년 미만 직원은 <strong>1개월 만근 시 월차 1일</strong>이 발생합니다.",
+        "휴가를 사용할 때는 인사시스템에서 미리 신청해 주세요."
+      ],
+      actions: [
+        { label: "인사시스템 바로가기", href: "https://m.hdel.co.kr", kind: "link" },
+        { label: "휴가 신청 방법 보기", kind: "manual", manual: { title: "휴가(근태) 신청 방법", folder: "leave", count: 8 } }
+      ]
+    },
+    {
+      id: "payslip",
+      label: "급여명세서",
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>',
+      title: "급여명세서",
+      body: ["월급은 <strong>매월 25일</strong> 입금되며, 급여명세서는 인사시스템에서 확인할 수 있습니다."],
+      actions: [
+        { label: "인사시스템 바로가기", href: "https://m.hdel.co.kr", kind: "link" },
+        { label: "급여명세서 확인 방법 보기", kind: "manual", manual: { title: "급여명세서 확인 방법", folder: "payslip", count: 3 } }
+      ]
+    },
+    {
+      id: "cert",
+      label: "재직증명서",
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>',
+      title: "재직증명서",
+      body: ["재직증명서는 인사시스템에서 신청하면 PDF 파일로 다운로드할 수 있습니다."],
+      actions: [
+        { label: "인사시스템 바로가기", href: "https://m.hdel.co.kr", kind: "link" },
+        { label: "재직증명서 신청 방법 보기", kind: "manual", manual: { title: "재직증명서 신청 방법", folder: "cert", count: 4 } }
+      ]
+    },
+    {
+      id: "welfare",
+      label: "복지포인트",
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg>',
+      title: "복지포인트",
+      body: ["입사 후 3개월이 지나면 복지포인트가 지급되며, ① <strong>신용카드로 발급</strong>받거나 ② <strong>복지몰</strong>에서 사용하실 수 있습니다."],
+      actions: [
+        { label: "복지카드(KEB하나) 발급 방법 보기", kind: "manual", manual: { title: "복지카드(KEB하나카드) 발급 방법", folder: "welfare-card", count: 11 } },
+        { label: "복지몰(현대이지웰) 사용 방법 보기", kind: "manual", manual: { title: "현대이지웰 복지몰 이용 방법", folder: "welfare-mall", count: 49 } }
+      ],
+      faq: [
+        {
+          q: "복지포인트 카드 발급이 불가하다고 합니다. 저는 복지포인트를 사용할 수 없는 건가요?",
+          a: "미성년자이거나 개인 신용에 따라 발급 불가한 경우가 있습니다. 그런 경우 복지몰(현대이지웰) App에서 복지포인트를 사용하실 수 있습니다."
+        },
+        {
+          q: "복지포인트 카드와 복지몰 둘 다 신청해야 하나요?",
+          a: "아니오. 두 가지 방식 중 편한 방식을 활용하시면 됩니다. 하나만 하셔도 되고, 두 가지 방법을 모두 활용하셔도 됩니다."
+        }
+      ]
+    },
+    {
+      id: "taxsettle",
+      label: "연말정산",
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="10" y2="11"/><line x1="14" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="10" y2="15"/><line x1="14" y1="15" x2="16" y2="15"/><line x1="8" y1="19" x2="16" y2="19"/></svg>',
+      title: "연말정산",
+      body: ["연말정산은 사업장 소속 근로자의 의무입니다. 매년 초(1월)에 안내드릴 예정입니다."],
+      actions: [
+        { label: "연말정산 방법 보기", href: "#", kind: "manual", pending: true }
+      ]
+    }
+  ];
+
+  var kwGrid = document.getElementById("kwGrid");
+  var kwDetail = document.getElementById("kwDetail");
+  var activeKw = KEYWORDS[0].id;
+
+  function renderKwGrid() {
+    kwGrid.innerHTML = "";
+    KEYWORDS.forEach(function (item) {
+      var btn = document.createElement("button");
+      btn.className = "kw-btn";
+      btn.setAttribute("aria-pressed", String(item.id === activeKw));
+      btn.innerHTML = item.icon + "<span>" + item.label + "</span>";
+      btn.addEventListener("click", function () {
+        activeKw = item.id;
+        renderKwGrid();
+        renderKwDetail();
+      });
+      kwGrid.appendChild(btn);
+    });
+  }
+
+  function renderKwDetail() {
+    var item = KEYWORDS.find(function (k) { return k.id === activeKw; });
+    if (!item) return;
+
+    var bodyHtml = item.body.length > 1
+      ? '<ul class="body-list">' + item.body.map(function (line) { return '<li>' + line + '</li>'; }).join("") + '</ul>'
+      : '<p class="body-text">' + item.body[0] + '</p>';
+
+    var faqHtml = "";
+    if (item.faq && item.faq.length) {
+      faqHtml =
+        '<div class="kw-faq">' +
+          '<div class="kw-faq-heading">자주 묻는 질문</div>' +
+          item.faq.map(function (f) {
+            return '<div class="kw-faq-item">' +
+              '<div class="kw-faq-q">Q. ' + f.q + '</div>' +
+              '<div class="kw-faq-a">A. ' + f.a + '</div>' +
+            '</div>';
+          }).join("") +
+        '</div>';
+    }
+
+    kwDetail.innerHTML =
+      '<h3>' + item.title + '</h3>' +
+      bodyHtml +
+      '<div class="kw-actions"></div>' +
+      faqHtml;
+
+    var actionsBox = kwDetail.querySelector(".kw-actions");
+    item.actions.forEach(function (a) {
+      var icon = a.kind === "manual" ? ICON_DOC : ICON_LINK;
+      var el;
+      if (a.pending) {
+        el = document.createElement("button");
+        el.className = "kw-action pending";
+        el.type = "button";
+        el.disabled = true;
+        el.title = "담당자가 파일·링크를 전달하면 연결될 예정입니다";
+        el.innerHTML = icon + a.label + " (준비중)";
+      } else if (a.kind === "manual") {
+        el = document.createElement("button");
+        el.className = "kw-action manual";
+        el.type = "button";
+        el.innerHTML = icon + a.label;
+        el.addEventListener("click", function () { openManual(a.manual); });
+      } else {
+        el = document.createElement("a");
+        el.className = "kw-action link";
+        el.href = a.href;
+        el.target = "_blank";
+        el.rel = "noopener";
+        el.innerHTML = icon + a.label;
+      }
+      actionsBox.appendChild(el);
+    });
+  }
+
+  renderKwGrid();
+  renderKwDetail();
+
+  /* ---------------- Manual viewer ---------------- */
+
+  var mv = document.getElementById("manualViewer");
+  var mvImg = document.getElementById("mvImg");
+  var mvTitle = document.getElementById("mvTitle");
+  var mvPage = document.getElementById("mvPage");
+  var mvPrev = document.getElementById("mvPrev");
+  var mvNext = document.getElementById("mvNext");
+  var mvClose = document.getElementById("mvClose");
+
+  var mvState = { folder: "", count: 0, index: 0, title: "" };
+
+  function renderManualPage() {
+    mvImg.src = mvState.folder + "/" + String(mvState.index + 1).padStart(2, "0") + ".jpg";
+    mvImg.alt = mvState.title + " " + (mvState.index + 1) + "쪽";
+    mvTitle.textContent = mvState.title;
+    mvPage.textContent = (mvState.index + 1) + " / " + mvState.count;
+    mvPrev.disabled = mvState.index === 0;
+    mvNext.disabled = mvState.index === mvState.count - 1;
+  }
+
+  function openManual(manual, startIndex) {
+    mvState = { folder: manual.folder, count: manual.count, index: startIndex || 0, title: manual.title };
+    renderManualPage();
+    mv.hidden = false;
+  }
+
+  function closeManual() { mv.hidden = true; }
+
+  mvPrev.addEventListener("click", function () {
+    if (mvState.index > 0) { mvState.index--; renderManualPage(); }
+  });
+  mvNext.addEventListener("click", function () {
+    if (mvState.index < mvState.count - 1) { mvState.index++; renderManualPage(); }
+  });
+  mvClose.addEventListener("click", closeManual);
+
+  document.addEventListener("keydown", function (evt) {
+    if (mv.hidden) return;
+    if (evt.key === "Escape") closeManual();
+    if (evt.key === "ArrowLeft") mvPrev.click();
+    if (evt.key === "ArrowRight") mvNext.click();
+  });
+
+  /* swipe left/right to change manual pages on touch devices */
+  var mvBody = document.querySelector(".mv-body");
+  var touchStartX = null;
+  mvBody.addEventListener("touchstart", function (evt) {
+    touchStartX = evt.changedTouches[0].clientX;
+  }, { passive: true });
+  mvBody.addEventListener("touchend", function (evt) {
+    if (touchStartX === null) return;
+    var dx = evt.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) {
+      if (dx < 0) mvNext.click(); else mvPrev.click();
+    }
+    touchStartX = null;
+  }, { passive: true });
+
+  /* ---------------- Archive data ---------------- */
+  /* Add new entries here as real performances happen — each one can
+     have a photo folder (numbered 01.jpg, 02.jpg, ... inside it) and/or
+     a video with a poster image. */
+
+  var EVENTS = [
+    {
+      id: "ev-20260701",
+      date: "2026.07.01",
+      title: "이동석 충주시장 취임식 축하공연",
+      desc: "충주시청 3층 대회의실에서 열린 이동석 충주시장 취임식에 초청되어 축하공연을 했습니다. '행복을 주는 사람', '아름다운 나라' 두 곡을 선보였습니다.",
+      color: "navy",
+      cover: "events/chungju-inauguration/cover.jpg",
+      photoFolder: "events/chungju-inauguration",
+      photoCount: 8,
+      video: {
+        src: "events/chungju-inauguration/performance.mp4",
+        poster: "events/chungju-inauguration/poster.jpg"
+      }
+    }
+  ];
+
+  var COVER_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>';
+
+  var archiveGrid = document.getElementById("archiveGrid");
+  var eventDetail = document.getElementById("eventDetail");
+
+  var COVER_STYLE = {
+    navy: "background: var(--navy-soft); color: var(--navy);",
+    teal: "background: var(--teal-soft); color: var(--teal);",
+    gold: "background: var(--gold-soft); color: var(--gold-ink);"
+  };
+
+  function renderEvents() {
+    archiveGrid.innerHTML = "";
+    EVENTS.forEach(function (ev) {
+      var card = document.createElement("button");
+      card.className = "event-card";
+      var coverInner = ev.cover
+        ? '<img src="' + ev.cover + '" alt="" loading="lazy">'
+        : COVER_ICON;
+      card.innerHTML =
+        '<div class="event-cover" style="' + COVER_STYLE[ev.color] + '">' +
+          (ev.video ? '<span class="event-badge">영상 있음</span>' : '') +
+          coverInner +
+        '</div>' +
+        '<div class="event-body">' +
+          '<div class="event-date">' + ev.date + '</div>' +
+          '<h3 class="event-title">' + ev.title + '</h3>' +
+        '</div>';
+      card.addEventListener("click", function () { openEvent(ev); });
+      archiveGrid.appendChild(card);
+    });
+  }
+
+  function openEvent(ev) {
+    var tiles = "";
+    if (ev.photoFolder) {
+      for (var i = 0; i < ev.photoCount; i++) {
+        tiles += '<button type="button" class="media-tile media-tile-photo" data-idx="' + i + '">' +
+          '<img src="' + ev.photoFolder + '/' + String(i + 1).padStart(2, "0") + ".jpg" + '" alt="' + ev.title + ' 사진 ' + (i + 1) + '" loading="lazy">' +
+        '</button>';
+      }
+    }
+
+    var videoHtml = "";
+    if (ev.video) {
+      videoHtml =
+        '<video class="event-video" controls playsinline preload="metadata" poster="' + ev.video.poster + '">' +
+          '<source src="' + ev.video.src + '" type="video/mp4">' +
+        '</video>';
+    }
+
+    eventDetail.innerHTML =
+      '<div class="event-detail-head">' +
+        '<div>' +
+          '<div class="event-date">' + ev.date + '</div>' +
+          '<h3>' + ev.title + '</h3>' +
+        '</div>' +
+        '<button class="close-detail" id="closeDetail" aria-label="닫기">' +
+          '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
+        '</button>' +
+      '</div>' +
+      '<p class="desc">' + ev.desc + '</p>' +
+      (videoHtml ? '<div class="video-wrap">' + videoHtml + '</div>' : '') +
+      (tiles ? '<div class="media-grid">' + tiles + '</div>' : '');
+
+    eventDetail.hidden = false;
+    eventDetail.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    document.getElementById("closeDetail").addEventListener("click", function () {
+      eventDetail.hidden = true;
+    });
+
+    if (ev.photoFolder) {
+      eventDetail.querySelectorAll(".media-tile-photo").forEach(function (tile) {
+        tile.addEventListener("click", function () {
+          openManual(
+            { folder: ev.photoFolder, count: ev.photoCount, title: ev.title },
+            parseInt(tile.getAttribute("data-idx"), 10)
+          );
+        });
+      });
+    }
+  }
+
+  renderEvents();
+})();
+</script>
